@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-8 col-md-5"> 
+        {% if offer.name %}
+        <h2 class="display-6"><b>{{offer.name}}</b></h2>
+        <p><b>Restaurant:</b> {{offer.restaurant}} <br>
+        <b>Description:</b> <br> {{offer.description}} <br>
+        <b>Date:</b> {{offer.start_date}} to {{offer.end_date}} <br>
+        <b>Location:</b> {{offer.location}}</p>
+        {% elif event.name %}
+        <h2 class="display-6"><b>{{event.name}}</b></h2>
+        <p><b>Restaurant:</b> {{event.restaurant}} <br>
+        <b>Description:</b> <br> {{event.description}} <br>
+        <b>Date:</b> {{event.start_date}} to {{event.end_date}} <br>
+        <b>Location:</b> {{event.location}}</p>
+        {% else %}
+        <h1>Invalid input</h1>
+        {% endif %}
+    </div>
+    <div class="col"></div>
+</div>
+
+
+{% endblock %}

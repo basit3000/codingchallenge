@@ -1,0 +1,31 @@
+{% extends 'main2.html' %}
+{% block content %}
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8 col-md-5">
+            <h1 class="text-center display-1">LOCAL RESTAURANTS</h1>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <form method="GET" action="{% url 'search' %}">
+                <div class="form-group"> <input type="text" name="q" class="form-control" placeholder="Search..."></div>
+                
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+{% endblock %}

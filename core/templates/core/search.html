@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<style>
+    .home-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+</style>
+
+<div class="home-container">
+    <div>
+    </div>
+    <div>
+        <h3>Offers:</h3>
+        <hr>
+        {% for offer in offers %}
+        <div>
+            <h5>{{offer.id}} -- <a href="/result/offer/{{offer.id}}" class="text-decoration-none">{{offer.name}}</a></h5>
+            <p><b>Restaurant name:</b> {{offer.restaurant}}</p> 
+            <p>{{offer.description}}</p> 
+            <hr>
+        </div>
+        {% endfor %}
+        <h3>Events:</h3>
+        <hr>
+        {% for event in events %}
+        <div>
+            <h5>{{event.id}} -- <a href="/result/event/{{event.id}}" class="text-decoration-none">{{event.name}}</a></h5>
+            <p><b>Restaurant name:</b> {{event.restaurant}}</p> 
+            <p>{{event.description}}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
