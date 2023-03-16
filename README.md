@@ -1,6 +1,6 @@
 # codingchallenge
 
-# hosted on https://codingchallengebasit.herokuapp.com
+# previously hosted on https://codingchallengebasit.herokuapp.com
 
 # Walkthrough video: https://youtu.be/dFgYH2nzsjw
 
